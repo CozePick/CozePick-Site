@@ -1,99 +1,153 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>CozePick | 감성 큐레이션</title>
+  <title>CozePick | 감성 큐레이션 마켓</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #fff9f5;
+      background-color: #fffaf7;
       color: #333;
     }
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #ffefe7;
-      border-bottom: 1px solid #ffd5c2;
-    }
+```
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffeae0;
+  border-bottom: 1px solid #ffd2c2;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #ff715b;
-    }
+h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #ff715b;
+}
 
-    .subtitle {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #777;
-    }
+.subtitle {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #666;
+}
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+.section {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    .product {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease;
-    }
+.section h2 {
+  font-size: 1.6rem;
+  color: #ff715b;
+  border-bottom: 2px solid #ffd5cc;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
 
-    .product:hover {
-      transform: scale(1.01);
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    .product h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      color: #ff715b;
-    }
+.product {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
 
-    .product p {
-      margin: 8px 0;
-      line-height: 1.5;
-    }
+.product:hover {
+  transform: scale(1.015);
+}
 
-    .note {
-      font-size: 0.85rem;
-      color: gray;
-    }
+.product h3 {
+  margin-top: 0;
+  color: #e95d45;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 20px;
-      background-color: #ff715b;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
+.product p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
 
-    .btn:hover {
-      background-color: #e95d45;
-    }
+.note {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #ff715b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #e95d45;
+}
+```
+
   </style>
 </head>
 <body>
   <header>
     <h1>CozePick</h1>
-    <div class="subtitle">감성과 실용이 만나는 나만의 큐레이션</div>
+    <div class="subtitle">감성과 실용이 만나는 큐레이션 마켓</div>
   </header>
 
-  <div class="container">
-    <div class="product">
-      <h2>#무드등</h2>
-      <p>혼자 있는 밤, 잔잔하게 공간을 감싸주는 조명.</p>
-      <p class="note">※ 파트너스 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</p>
-      <a class="btn" href="https://link.coupang.com/recommended" target="_blank">쿠팡에서 보기</a>
+  <div class="section">
+    <h2>#혼자 있을 때</h2>
+    <div class="grid">
+      <div class="product"><h3>무드등</h3><p>혼자 있는 밤, 공간을 따뜻하게 감싸주는 조명입니다.</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>디퓨저</h3><p>잔잔한 향기로 혼자 있는 시간을 채워보세요.</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>빈티지 라디오</h3><p>감성적인 배경음악과 어울리는 소형 라디오</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>코튼 블랭킷</h3><p>가볍고 부드러운 혼자 시간의 필수템</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>티포트</h3><p>작은 찻잔과 함께하는 아늑한 오후</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>우드 캔들 홀더</h3><p>캔들과 함께 분위기를 살리는 감성 소품</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>저소음 가습기</h3><p>조용히 켜두기 좋은 미니 가습기</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>독서등</h3><p>책 한 권과 조용한 밤을 위한 독서 조명</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>루프백 스피커</h3><p>혼자 듣는 음악, 더 깊이 빠져드는 시간</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>쿠션 슬리퍼</h3><p>집 안을 걷는 즐거움, 폭신한 발걸음</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>#하루를 시작할 때</h2>
+    <div class="grid">
+      <div class="product"><h3>미니 토스트기</h3><p>아침을 간단하게, 따뜻하게 시작해요.</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>자동 우유 거품기</h3><p>나만의 홈카페 라떼 완성</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>탁상용 미니 달력</h3><p>하루를 계획하며 정리하는 습관</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>무소음 알람시계</h3><p>스트레스 없이 일어나는 소리</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>샤워 스피커</h3><p>씻으면서 듣는 아침 플레이리스트</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>모닝 스트레칭 매트</h3><p>간단한 운동으로 활력을 채워요</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>비타민 디스펜서</h3><p>하루 건강 루틴 시작</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>아로마 클렌징폼</h3><p>기분까지 리셋되는 향기</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>스탠딩 컵홀더</h3><p>책상 위 커피도 감성적으로</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>모닝 저널북</h3><p>마음 챙김을 위한 5분 일기장</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>#마음이 지칠 때</h2>
+    <div class="grid">
+      <div class="product"><h3>발열 안대</h3><p>눈을 감으면 따뜻해지는 안식</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>카모마일 티백</h3><p>하루 끝에 마시는 진정의 한 잔</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>손마사지기</h3><p>작은 터치가 주는 힐링</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>마그네슘 배스 솔트</h3><p>반신욕으로 피로를 녹이다</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>마음 힐링 북</h3><p>짧은 문장으로 위로받는 책</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>가벼운 필라테스밴드</h3><p>심호흡과 함께 몸을 다시 느끼다</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>디지털 명상 타이머</h3><p>잡생각 멈추기 훈련, 타이머와 함께</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>아로마 오일 롤온</h3><p>주머니 속 작은 힐링</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>멀티 수면쿠션</h3><p>누워서 책 읽기에도 딱 좋은 형태</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
+      <div class="product"><h3>조용한 백색소음기</h3><p>마음의 소음을 덮는 소리</p><p class="note">※ 제휴 수수료 제공</p><a class="btn" href="#">쿠팡에서 보기</a></div>
     </div>
   </div>
 </body>
