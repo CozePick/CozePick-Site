@@ -38,36 +38,65 @@
     }
 
     .hero img {
-  width: 320px;
-  max-width: 80%;
-  margin-bottom: 20px;
-}
+      width: 380px;
+      margin-bottom: 24px;
+    }
 
-.card {
-  background: #f4f4f4;
-  border-radius: 12px;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .hero p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 560px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 10px;
+    }
 
-.card img {
-  width: 120px;
-  opacity: 0.9;
-  transition: transform 0.2s ease;
-}
+    .btn {
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      border: 1.5px solid #cc5033;
+      cursor: pointer;
+    }
 
-.card:hover img {
-  transform: scale(1.05);
-}
+    .btn.primary {
+      background: #cc5033;
+      color: white;
+    }
 
+    .btn.secondary {
+      background: transparent;
+      color: #cc5033;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      padding: 40px 20px 80px;
+      margin: auto;
+    }
+
+    .card {
+      background: #f4f4f4;
+      border-radius: 12px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      width: 60px;
+      opacity: 0.5;
+    }
   </style>
 </head>
 <body>
