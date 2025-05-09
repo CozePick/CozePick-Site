@@ -199,7 +199,21 @@
   </div>
   <button class="arrow right" onclick="scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });">→</button>
 </div>
+<!-- 부드럽게 5개씩 스크롤 이동하는 스크립트 추가 -->
+<script>
+  const scrollContainer = document.getElementById('scrollContainer');
+  const cardWidth = 152; // 카드 1개(140px) + 여백(12px)
+  const cardsPerScroll = 5;
+  const scrollAmount = cardWidth * cardsPerScroll;
 
+  function scrollLeft() {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  }
+
+  function scrollRight() {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+</script>
 <!-- 테마별 상품 페이지 버튼 -->
 <div class="theme-buttons">
   <a href="products/theme1.html">모던 키친</a>
