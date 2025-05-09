@@ -144,7 +144,7 @@
 
 <!-- 가로 스크롤 상품 리스트 -->
 <div class="scroll-container-wrapper">
-  <button class="arrow left" onclick="scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });">←</button>
+  <button class="arrow left" onclick="scrollLeft()">←</button>
   <div class="scroll-container" id="scrollContainer">
     <div class="scroll-card"><img src="https://via.placeholder.com/60" alt="상품 이미지 1"></div>
     <div class="scroll-card"><img src="https://via.placeholder.com/60" alt="상품 이미지 2"></div>
@@ -196,24 +196,14 @@
     <div class="scroll-card"><img src="https://via.placeholder.com/60" alt="상품 이미지 48"></div>
     <div class="scroll-card"><img src="https://via.placeholder.com/60" alt="상품 이미지 49"></div>
     <div class="scroll-card"><img src="https://via.placeholder.com/60" alt="상품 이미지 50"></div>
+      <div class="scroll-card">
+        <img src="https://via.placeholder.com/60" alt="상품 이미지 ${i + 1}">
+      </div>
+    `).join('')}
   </div>
-  <button class="arrow right" onclick="scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });">→</button>
+  <button class="arrow right" onclick="scrollRight()">→</button>
 </div>
-<!-- 부드럽게 5개씩 스크롤 이동하는 스크립트 추가 -->
-<script>
-  const scrollContainer = document.getElementById('scrollContainer');
-  const cardWidth = 152; // 카드 1개(140px) + 여백(12px)
-  const cardsPerScroll = 5;
-  const scrollAmount = cardWidth * cardsPerScroll;
 
-  function scrollLeft() {
-    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  }
-
-  function scrollRight() {
-    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  }
-</script>
 <!-- 테마별 상품 페이지 버튼 -->
 <div class="theme-buttons">
   <a href="products/theme1.html">모던 키친</a>
@@ -223,17 +213,22 @@
   <a href="products/theme5.html">미니 가전</a>
 </div>
 
+<!-- 스크립트: 부드럽게 5개씩 이동 -->
 <script>
-  const scrollContainer = document.getElementById('scrollContainer');
-  const scrollAmount = 152 * 5; // 5개씩 스크롤
+  window.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.getElementById('scrollContainer');
+    const cardWidth = 152; // 140px + 12px gap
+    const cardsPerScroll = 5;
+    const scrollAmount = cardWidth * cardsPerScroll;
 
-  function scrollLeft() {
-    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  }
+    window.scrollLeft = function() {
+      scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
 
-  function scrollRight() {
-    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  }
+    window.scrollRight = function() {
+      scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
 </script>
 
 </body>
